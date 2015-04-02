@@ -1,7 +1,6 @@
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -58,19 +57,16 @@ public class FrontEnd extends JFrame implements ActionListener
 				    	    null,
 				    	    bob,
 				    	    bob[1]);
-			String s= "";
-			String m="";
 			if(n!=-1)
 			{
 				if(n==0)
 				{
-					s= JOptionPane.showInputDialog("Type the Name");
-					
+					String s= JOptionPane.showInputDialog("Type the Name");
 				}
 				else
 				{
 					Object[] joe= BackEnd.getUsers().toArray();
-					s = (String)JOptionPane.showInputDialog(
+					String s = (String)JOptionPane.showInputDialog(
 	                    this,
 	                    "Choose the Name \n",
 	                    "",
@@ -79,32 +75,10 @@ public class FrontEnd extends JFrame implements ActionListener
 	                    joe,
 	                    joe[0]);
 				}
-				m=JOptionPane.showInputDialog("Type message:");
-				backend.addMessage(s,m);
-				
 			}
 		}
 		if(arg0.getActionCommand()=="getmessage")
 		{
-			Object[] joe= BackEnd.getUsers().toArray();
-			String s = (String)JOptionPane.showInputDialog(
-                this,
-                "Choose the Name \n",
-                "",
-                JOptionPane.PLAIN_MESSAGE,
-                null,
-                joe,
-                joe[0]);
-			List<String> messages = backend.getMessages(s);
-			String msgs= "";
-			for(String g:messages)
-			{
-				msgs+=g+"\n";
-			}
-			JOptionPane.showMessageDialog(this,
-				    msgs,
-				    "Messages of "+s,
-				    JOptionPane.PLAIN_MESSAGE);
 			
 		}
 		

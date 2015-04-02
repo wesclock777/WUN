@@ -95,16 +95,7 @@ public class FrontEnd extends JFrame implements ActionListener
                 null,
                 joe,
                 joe[0]);
-			List<String> messages = backend.getMessages(s);
-			String msgs= "";
-			for(String g:messages)
-			{
-				msgs+=g+"\n";
-			}
-			JOptionPane.showMessageDialog(this,
-				    msgs,
-				    "Messages of "+s,
-				    JOptionPane.PLAIN_MESSAGE);
+			List<String> messages = backend.getMessages();
 			
 		}
 		
