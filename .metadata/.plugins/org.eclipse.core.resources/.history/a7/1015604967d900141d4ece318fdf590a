@@ -65,7 +65,7 @@ public class FrontEnd extends JFrame implements ActionListener
 				}
 				else
 				{
-					Object[] joe= BackEnd.getUsers().toArray();
+					Object[] joe= BackEnd.getUsers().toArray()
 					String s = (String)JOptionPane.showInputDialog(
 	                    this,
 	                    "Choose the Name \n"

@@ -65,10 +65,9 @@ public class FrontEnd extends JFrame implements ActionListener
 				}
 				else
 				{
-					Object[] joe= BackEnd.getUsers().toArray();
 					String s = (String)JOptionPane.showInputDialog(
-	                    this,
-	                    "Choose the Name \n"
+	                    frame,
+	                    "Complete the sentence:\n"
 	                    + "\"Green eggs and...\"",
 	                    "Customized Dialog",
 	                    JOptionPane.PLAIN_MESSAGE,
