@@ -1,0 +1,56 @@
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class FrontEnd extends JFrame implements ActionListener
+{
+	private BackEnd backend;
+	private Encoder encoder;
+	private JButton addmessage;
+	private JButton getmessage;
+	
+	public FrontEnd()
+	{
+		
+		
+		Container pane= this.getContentPane();
+		backend= new BackEnd();
+		encoder= new Encoder();
+		addmessage = new JButton("add message");
+		getmessage = new JButton("get message");
+		
+		pane.add(addmessage);
+		pane.add(getmessage);
+		
+		addmessage.addActionListener(this);
+		getmessage.addActionListener(this);
+		
+		addmessage.setActionCommand("addmessage");
+		getmessage.setActionCommand("getmessage");
+		
+		this.setSize(200,200);
+		this.setVisible(true);
+		
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) 
+	{
+		if(arg0.getActionCommand()=="addmessage")
+		{
+			
+		}
+		if(arg0.getActionCommand()=="getmessage")
+		{
+			
+		}
+		
+		
+	}
+}
