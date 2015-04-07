@@ -22,7 +22,7 @@ public class FrontEnd extends JFrame implements ActionListener
 		
 		Container pane= this.getContentPane();
 		backend= new BackEnd();
-		
+		encoder= new Encoder();
 		addmessage = new JButton("add message");
 		addmessage.setBounds(24, 94, 136, 37);
 		getmessage = new JButton("get message");
